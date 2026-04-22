@@ -1,24 +1,32 @@
-# Paper Trading Runner
+# Paper Trading CSV Replay Utility (Secondary)
 
-Deze map bevat een eenvoudige **CSV replay paper-trading runner** voor gevalideerde strategieën.
+This folder contains a **simple replay runner** for validated strategy JSON + OHLCV CSV data.
 
-## Doel
-- Strategy JSON laden
-- Bars uit CSV replays gebruiken
-- Signal-logica hergebruiken uit `research/validate_strategy.py`
-- Eén positie tegelijk paper traden (geen exchange calls)
-- Trades, PnL, equity en drawdown loggen
+> This is **not** the main paper-trader runtime. The primary operations path is `python paper_trader.py` from the repo root.
 
-## Standaard input
-- Strategie: `research/validated_strategies/momentum_breakout_v1.json`
+## What this utility does
+
+- Loads strategy parameters from a validated strategy JSON.
+- Replays bars from a CSV file.
+- Reuses signal/risk logic from `research/validate_strategy.py`.
+- Runs a one-position-at-a-time paper loop (no broker/exchange execution path).
+- Writes trade log + summary metrics.
+
+## Default inputs
+
+- Strategy: `research/validated_strategies/momentum_breakout_v1.json`
 - Data: `data/BTCUSDT_5s_bars.csv`
 
+These defaults are convenience examples; for FX-focused work, pass your own strategy/data files via CLI args.
+
 ## Run
+
 ```bash
 python paper_trading/paper_trade_strategy.py
 ```
 
-Optionele args:
+Optional args:
+
 ```bash
 python paper_trading/paper_trade_strategy.py \
   --strategy-path research/validated_strategies/momentum_breakout_v1.json \
@@ -28,6 +36,7 @@ python paper_trading/paper_trade_strategy.py \
 ```
 
 ## Output
+
 - Terminal summary:
   - total trades
   - win rate
@@ -36,15 +45,3 @@ python paper_trading/paper_trade_strategy.py \
   - final equity
 - Trade log CSV:
   - `paper_trading/paper_portfolio_log.csv`
-
-Trade log velden:
-- `timestamp_entry`
-- `timestamp_exit`
-- `side`
-- `entry_price`
-- `exit_price`
-- `gross_return`
-- `net_return`
-- `fee_paid`
-- `reason_exit`
-- `equity_after_trade`
