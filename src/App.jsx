@@ -14,7 +14,7 @@ import {
   Network,
   Workflow,
 } from "lucide-react";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const cvPath = "/cv/Gilmaro_Piter_CV.pdf";
 const email = "gilmaropiter@gmail.com";
