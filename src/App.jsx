@@ -58,14 +58,16 @@ const buildCards = [
 const projects = [
   {
     title: "OpenAxis",
-    label: "Data Platform / Monitoring Platform",
+    label: "Research & Monitoring Platform",
     description:
-      "Een platform voor het structureren van datasets, analyseprocessen en dashboards.",
+      "OpenAxis is een onderzoeks- en monitoringplatform voor het structureren, valideren en analyseren van datasets. De focus ligt op datakwaliteit, reproduceerbare analyses, monitoring en het inzichtelijk maken van resultaten via dashboards.",
     tech: ["Python", "FastAPI", "PostgreSQL", "Docker", "Data Pipelines"],
     impact: [
       "Minder handmatig analysewerk",
-      "Centrale plek voor data en resultaten",
-      "Herhaalbare onderzoeksprocessen",
+      "Centrale omgeving voor datasets en resultaten",
+      "Reproduceerbare analyses",
+      "Datakwaliteit en validatie",
+      "Monitoring van processen en resultaten",
       "Schaalbare basis voor verdere uitbreiding",
     ],
   },
@@ -117,23 +119,26 @@ const processSteps = [
   "Verbeteren",
 ];
 
-const skills = [
+const coreSkills = [
   "Python",
   "SQL",
-  "FastAPI",
-  "PostgreSQL",
-  "Docker",
-  "Git",
   "Data Analysis",
-  "Data Pipelines",
-  "Dashboarding",
   "Process Automation",
+  "PostgreSQL",
+  "Git",
+  "FastAPI",
+  "Docker",
   "Monitoring",
-  "Research Methodology",
-  "CSV Processing",
-  "Testing",
+  "Dashboarding",
+];
+
+const additionalSkills = [
+  "Data Pipelines",
   "API Integrations",
   "Webhooks",
+  "Testing",
+  "Research Methodology",
+  "CSV Processing",
   "Time-Series Analysis",
 ];
 
@@ -213,17 +218,17 @@ function App() {
 
       <section className="hero" id="top">
         <div className="hero-content">
-          <p className="eyebrow">Self-Taught Data & Automation Engineer</p>
-          <h1>Data, Automation & Process Improvement</h1>
+          <p className="eyebrow">Junior Data & Systems Specialist</p>
+          <h1>Data • Automation • Research Systems</h1>
           <p className="hero-subtitle">
-            Ik bouw praktische data- en automatiseringsoplossingen die processen
-            inzichtelijk, meetbaar en beter uitvoerbaar maken.
+            Ik bouw systemen die complexe processen inzichtelijk, meetbaar en
+            automatiseerbaar maken.
           </p>
           <p className="hero-text">
             Met een achtergrond in topsport en jarenlange zelfstudie heb ik
-            gewerkt aan Python-projecten rondom data-analyse, automatisering,
-            API-integraties, monitoring en dashboards. Mijn focus ligt op
-            gestructureerd werken, data begrijpen en processen verbeteren.
+            gewerkt aan projecten rondom data-analyse, automatisering,
+            monitoring en onderzoeksplatformen. De focus ligt op gestructureerd
+            werken, data begrijpen en processen verbeteren.
           </p>
           <div className="badge-row" aria-label="Kerninformatie">
             <span>Beschikbaar 32+ uur</span>
@@ -237,11 +242,6 @@ function App() {
               <ArrowRight size={18} aria-hidden="true" />
             </a>
             <CvButton variant="secondary" />
-            <CvButton
-              variant="secondary"
-              href={houseOfBetaCvPath}
-              label="Download CV (House of Beta)"
-            />
             <a className="button button-ghost" href={`mailto:${email}`}>
               <Mail size={18} aria-hidden="true" />
               Neem contact op
@@ -295,14 +295,13 @@ function App() {
               data, processen en technische oplossingen samenkomen.
             </p>
             <p>
-              Mijn interesse begon binnen een data-intensief onderzoeksdomein,
-              maar de kern van mijn werk ligt breder: data structureren,
-              processen modelleren, systemen bouwen en resultaten meetbaar
-              maken.
+              Mijn interesse begon binnen financiële markten, maar de kern van
+              mijn werk ligt breder: data structureren, processen modelleren,
+              systemen bouwen en resultaten meetbaar maken.
             </p>
             <p>
-              Ik zoek een omgeving waarin ik verder kan groeien binnen IT, data,
-              analyse en applicatiebeheer.
+              Ik zoek een omgeving waarin ik verder kan groeien binnen data,
+              automatisering, applicatiebeheer en research systems.
             </p>
           </div>
           <div className="profile-card">
@@ -392,25 +391,42 @@ function App() {
       <section className="section" id="skills">
         <SectionHeader
           eyebrow="Skills"
-          title="Technische basis"
-          text="Een praktische stack voor junior data-, automation- en systemsrollen."
+          title="Kernvaardigheden"
+          text="Een praktische technische basis voor data, automatisering, monitoring en procesverbetering."
         />
-        <div className="skill-cloud">
-          {skills.map((skill) => (
-            <span key={skill}>{skill}</span>
-          ))}
+        <div className="skills-layout">
+          <div>
+            <h3>Kernvaardigheden</h3>
+            <div className="skill-cloud">
+              {coreSkills.map((skill) => (
+                <span key={skill}>{skill}</span>
+              ))}
+            </div>
+          </div>
+          <div>
+            <h3>Aanvullend</h3>
+            <div className="skill-cloud">
+              {additionalSkills.map((skill) => (
+                <span key={skill}>{skill}</span>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
       <section className="section recruiter">
         <div>
-          <p className="eyebrow">Recruiter focus</p>
-          <h2>Waarom dit profiel past bij een traineeship</h2>
+          <p className="eyebrow">Recruiter Samenvatting</p>
+          <h2>Junior Data & Systems Specialist</h2>
           <p>
-            Mijn profiel is niet traditioneel, maar wel praktisch en leergierig.
-            Door topsport, zelfstudie en eigen projecten heb ik geleerd om
-            zelfstandig te werken, feedback te verwerken en stap voor stap
-            complexe onderwerpen eigen te maken.
+            Junior Data & Systems Specialist met een achtergrond in topsport,
+            onderwijs en jarenlange zelfstudie richting IT. Praktisch ingesteld,
+            analytisch en gewend om zelfstandig complexe onderwerpen eigen te
+            maken. Ervaring met Python, SQL, FastAPI, PostgreSQL, Docker,
+            monitoring, dashboards, API-integraties en procesautomatisering.
+            Sterk in discipline, eigenaarschap, samenwerken en continu
+            verbeteren. Op zoek naar een traineeship of junior functie waarin
+            data, technologie en procesverbetering samenkomen.
           </p>
         </div>
         <div className="focus-grid">
@@ -425,14 +441,26 @@ function App() {
 
       <section className="section house-beta" id="house-of-beta">
         <div>
-          <p className="eyebrow">Waarom House of Beta</p>
-          <h2>Groei in data, technologie en praktijkvraagstukken</h2>
+          <p className="eyebrow">Waarom House of Bèta</p>
+          <h2>Analytisch leren in echte projecten</h2>
           <p>
             Ik ben op zoek naar een omgeving waarin analytisch denken, leren in
             de praktijk en het oplossen van complexe vraagstukken centraal
-            staan. De combinatie van data, technologie en persoonlijke
-            ontwikkeling sluit goed aan bij hoe ik mezelf de afgelopen jaren heb
-            ontwikkeld.
+            staan.
+          </p>
+          <p>
+            De combinatie van data, technologie en persoonlijke ontwikkeling
+            sluit goed aan bij hoe ik mezelf de afgelopen jaren heb ontwikkeld.
+          </p>
+          <p>
+            Mijn achtergrond is niet traditioneel, maar juist daardoor heb ik
+            geleerd om zelfstandig kennis op te bouwen, feedback te verwerken en
+            nieuwe onderwerpen stap voor stap eigen te maken.
+          </p>
+          <p>
+            House of Bèta spreekt mij aan omdat het ruimte biedt om te groeien,
+            praktijkervaring op te doen en tegelijkertijd waarde toe te voegen
+            aan echte projecten.
           </p>
         </div>
         <div className="house-beta-actions">

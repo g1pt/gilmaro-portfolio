@@ -1,101 +1,139 @@
 # Gilmaro Piter
 
-**Self-Taught Data & Automation Engineer**  
-**Junior Data & Systems Specialist | Research Systems Builder | Data & Process Improvement Professional**
+## Junior Data & Systems Specialist
+
+### Data • Automation • Research Systems
 
 Rotterdam / Nederland  
 gilmaropiter@gmail.com  
 Beschikbaar vanaf 32 uur per week
 
-## Recruiter-samenvatting
-
-Self-taught data & automation engineer met een achtergrond in topsport, onderwijs en jarenlange zelfstudie richting IT. Praktisch ingesteld, analytisch en gewend om zelfstandig complexe onderwerpen stap voor stap eigen te maken. Heeft eigen projecten gebouwd met Python, data-analyse, API-integraties, dashboards, monitoring, Docker, FastAPI en PostgreSQL. Sterk in discipline, eigenaarschap, samenwerken en continu verbeteren. Zoekt een junior rol of traineeship waarin data, technologie, procesverbetering en begeleiding samenkomen.
-
 ## Profiel
 
-Mijn achtergrond is niet traditioneel, maar wel doelgericht opgebouwd. Tien jaar topsport heeft gezorgd voor discipline, doorzettingsvermogen, samenwerken onder druk en een sterke focus op groei. Die werkhouding heb ik de afgelopen jaren toegepast op IT, data en automatisering.
+Ik bouw systemen die complexe processen inzichtelijk, meetbaar en automatiseerbaar maken.
 
-Door zelfstudie en eigen projecten heb ik ervaring opgedaan met Python, data-analyse, databases, API-koppelingen, monitoring, dashboards en reproduceerbare onderzoeksprocessen. Mijn kracht ligt in het praktisch bouwen van systemen die data structureren, processen inzichtelijk maken en helpen om betere beslissingen te nemen.
+Met een achtergrond in topsport en jarenlange zelfstudie heb ik gewerkt aan projecten rondom data-analyse, automatisering, monitoring en onderzoeksplatformen. De focus ligt op gestructureerd werken, data begrijpen en processen verbeteren.
 
-Ik zoek een omgeving waarin analytisch denken, leren in de praktijk en het oplossen van complexe vraagstukken centraal staan. House of Beta sluit goed aan bij de manier waarop ik mezelf ontwikkel: stap voor stap, met feedback, verantwoordelijkheid en focus op continue verbetering.
+Mijn achtergrond ligt niet in een traditionele IT-opleiding. Tien jaar topsport heeft gezorgd voor discipline, doorzettingsvermogen, samenwerken onder druk en een sterke focus op continue verbetering.
 
-## Kernkwaliteiten
+Diezelfde mentaliteit pas ik nu toe op data, software en automatisering. De afgelopen jaren heb ik zelfstandig gewerkt aan projecten waarin data, processen en technische oplossingen samenkomen.
 
-- Analytisch en onderzoekend: sterk in patronen herkennen, structuur aanbrengen en vragen terugbrengen naar meetbare onderdelen.
-- Leerbaar en zelfstandig: gewend om nieuwe technische onderwerpen via zelfstudie, documentatie en projecten eigen te maken.
-- Praktisch eigenaarschap: bouwt werkende oplossingen, test aannames en verbetert iteratief.
-- Procesmatig denken: kijkt naar data, stappen, afhankelijkheden, logging en herhaalbaarheid.
-- Communicatief en samenwerkingsgericht: ervaring met lesgeven aan basisschoolkinderen en samenwerken binnen topsportteams.
-- Discipline en doorzettingsvermogen: gevormd door tien jaar handbal op hoog niveau.
+Mijn interesse begon binnen financiële markten, maar de kern van mijn werk ligt breder: data structureren, processen modelleren, systemen bouwen en resultaten meetbaar maken.
 
-## Technische vaardigheden
+Ik zoek een omgeving waarin ik verder kan groeien binnen data, automatisering, applicatiebeheer en research systems.
 
-- **Programmeertalen:** Python, SQL
-- **Data:** data-analyse, CSV processing, time-series analysis, datakwaliteit, validatie
-- **Backend & APIs:** FastAPI, API-integraties, webhooks, event-driven workflows
-- **Databases:** PostgreSQL, gestructureerde opslag, querydenken
-- **Automation:** process automation, logging, monitoring, reproduceerbare workflows
-- **Dev tooling:** Git, Docker, testing, configuratiebeheer
-- **Dashboards & inzicht:** monitoring dashboards, statusoverzichten, proceskwaliteit
-- **Werkwijze:** research methodology, probleemverkenning, meten, verbeteren
+## Skills
+
+### Kernvaardigheden
+
+- Python
+- SQL
+- Data Analysis
+- Process Automation
+- PostgreSQL
+- Git
+- FastAPI
+- Docker
+- Monitoring
+- Dashboarding
+
+### Aanvullend
+
+- Data Pipelines
+- API Integrations
+- Webhooks
+- Testing
+- Research Methodology
+- CSV Processing
+- Time-Series Analysis
 
 ## Projectervaring
 
 ### OpenAxis
 
-**Type:** Data platform, research platform en monitoringomgeving  
-**Technologie:** Python, FastAPI, PostgreSQL, Docker, Data Pipelines
+**Research & Monitoring Platform**
 
-OpenAxis is opgezet als platform voor het structureren van historische datasets, analyse-uitkomsten en dashboards. De nadruk ligt op data centraal beschikbaar maken, onderzoek herhaalbaar maken en resultaten overzichtelijk tonen.
+OpenAxis is een onderzoeks- en monitoringplatform voor het structureren, valideren en analyseren van datasets.
 
-**Waarde:**
+De focus ligt op datakwaliteit, reproduceerbare analyses, monitoring en het inzichtelijk maken van resultaten via dashboards.
 
-- Minder handmatig analysewerk door gestructureerde dataflows.
-- Centrale plek voor datasets, resultaten en processtatus.
-- Herhaalbare onderzoeksprocessen met betere controle op kwaliteit.
-- Schaalbare basis voor uitbreiding met dashboards, logging en monitoring.
+**Technologie**
+
+- Python
+- FastAPI
+- PostgreSQL
+- Docker
+- Data Pipelines
+
+**Waarde**
+
+- Minder handmatig analysewerk
+- Centrale omgeving voor datasets en resultaten
+- Reproduceerbare analyses
+- Datakwaliteit en validatie
+- Monitoring van processen en resultaten
+- Schaalbare architectuur voor verdere uitbreiding
 
 ### Rule-Based Decision Support System
 
-**Type:** Beslissingsondersteuning en proceslogica  
-**Technologie:** Python, state machines, event logging, testing
+**Beslissingsondersteuning en proceslogica**
 
-Een systeem waarin subjectieve beslisregels zijn vertaald naar duidelijke, testbare en uitlegbare logica. Het doel was niet om handmatig oordeel te vervangen, maar om beslisprocessen consistenter, transparanter en beter meetbaar te maken.
+Een systeem waarin beslisregels zijn vertaald naar gestructureerde logica, automatische logging en uitlegbare processtappen. De focus ligt op consistentie, testbaarheid en inzicht in waarom een status of uitkomst ontstaat.
 
-**Waarde:**
+**Technologie**
 
-- Consistente toepassing van regels.
-- Minder afhankelijkheid van losse interpretaties.
-- Betere testbaarheid van beslislogica.
-- Inzicht in waarom een signaal, status of uitkomst wel of niet ontstaat.
+- Python
+- State Machines
+- Event Logging
+- Testing
+
+**Waarde**
+
+- Consistente analyse
+- Minder menselijke bias
+- Beter testbare beslisregels
+- Transparantere besluitvorming
 
 ### Multi-Market Research Engine
 
-**Type:** Validatieomgeving en data-onderzoekssysteem  
-**Technologie:** Python, Pandas, CSV processing, walk-forward analysis
+**Validatieomgeving en onderzoeksplatform**
 
-Een onderzoeksomgeving voor het vergelijken, testen en valideren van modellen over meerdere datasets. De focus ligt op data-validatie, kwaliteitscontrole en objectieve vergelijking van resultaten.
+Een validatieomgeving voor het testen, vergelijken en beoordelen van modellen over meerdere datasets. De focus ligt op data-validatie, kwaliteitscontrole en objectieve vergelijking van resultaten.
 
-**Waarde:**
+**Technologie**
 
-- Objectieve selectie van sterke en zwakke modellen.
-- Datagedreven besluitvorming op basis van meetbare uitkomsten.
-- Betere kwaliteitscontrole op datasets en analyseprocessen.
-- Meer structuur in experimenten en evaluatie.
+- Python
+- Pandas
+- CSV Processing
+- Walk-Forward Analysis
+
+**Waarde**
+
+- Objectieve selectie van sterke en zwakke modellen
+- Datagedreven besluitvorming
+- Betere kwaliteitscontrole op datasets
+- Meer structuur in experimenten en evaluatie
 
 ### Automation & API Integrations
 
-**Type:** Procesautomatisering en event-driven workflows  
-**Technologie:** Python, FastAPI, APIs, webhooks, logging
+**Procesautomatisering en event-driven workflows**
 
-Experimenten met API-koppelingen, webhooks, logging en monitoring om processen automatisch events te laten verwerken. De nadruk ligt op minder handmatige opvolging en beter inzicht in systeemgedrag.
+Experimenten met API-koppelingen, webhooks, logging en monitoring om processen automatisch events te laten verwerken.
 
-**Waarde:**
+**Technologie**
 
-- Minder handmatige stappen in terugkerende processen.
-- Duidelijke eventregistratie en logging.
-- Betere controle over foutafhandeling en systeemstatus.
-- Basis voor verdere automatisering en monitoring.
+- Python
+- FastAPI
+- APIs
+- Webhooks
+- Logging
+
+**Waarde**
+
+- Minder handmatige opvolging
+- Duidelijke eventregistratie
+- Betere controle over systeemgedrag
+- Basis voor verdere automatisering en monitoring
 
 ## Topsport achtergrond
 
@@ -127,18 +165,20 @@ Onderwerpen waarin ik zelfstandig ervaring heb opgebouwd:
 - Monitoring, logging en dashboards
 - Testing en reproduceerbare workflows
 
-## Persoonlijke motivatie
+## Waarom House of Bèta
 
-Ik wil groeien in een omgeving waar ik mijn analytische vermogen, discipline en praktische projectervaring verder kan ontwikkelen. Mijn ambitie ligt bij data, systemen, applicatiebeheer, procesverbetering en automatisering.
+Ik ben op zoek naar een omgeving waarin analytisch denken, leren in de praktijk en het oplossen van complexe vraagstukken centraal staan.
 
-House of Beta spreekt mij aan omdat het ruimte biedt om te leren in de praktijk, begeleiding te krijgen en tegelijk bij te dragen aan echte vraagstukken. Mijn niet-traditionele achtergrond zie ik niet als omweg, maar als basis voor doorzettingsvermogen, eigenaarschap en een sterke leerhouding.
+De combinatie van data, technologie en persoonlijke ontwikkeling sluit goed aan bij hoe ik mezelf de afgelopen jaren heb ontwikkeld.
 
-## LinkedIn About
+Mijn achtergrond is niet traditioneel, maar juist daardoor heb ik geleerd om zelfstandig kennis op te bouwen, feedback te verwerken en nieuwe onderwerpen stap voor stap eigen te maken.
 
-Ik ben Gilmaro Piter, een self-taught data & automation engineer uit Rotterdam met een achtergrond in topsport, onderwijs en jarenlange zelfstudie richting IT.
+House of Bèta spreekt mij aan omdat het ruimte biedt om te groeien, praktijkervaring op te doen en tegelijkertijd waarde toe te voegen aan echte projecten.
 
-Mijn interesse ligt bij data, systemen en procesverbetering: hoe verzamel je informatie betrouwbaar, hoe maak je processen herhaalbaar en hoe bouw je technische oplossingen die inzicht geven in wat er gebeurt? De afgelopen jaren heb ik zelfstandig projecten gebouwd met Python, data-analyse, API-integraties, FastAPI, PostgreSQL, Docker, monitoring en dashboards.
+## Recruiter Samenvatting
 
-Mijn route is niet traditioneel. Ik heb geen klassieke HBO- of universitaire IT-opleiding gevolgd, maar wel geleerd om zelfstandig complexe onderwerpen eigen te maken. Tien jaar handbal op hoog niveau heeft mij discipline, doorzettingsvermogen, samenwerken en continu verbeteren meegegeven. Lesgeven aan basisschoolkinderen heeft mijn communicatie en verantwoordelijkheid verder versterkt.
+Junior Data & Systems Specialist met een achtergrond in topsport, onderwijs en jarenlange zelfstudie richting IT.
 
-Ik zoek een junior rol of traineeship waarin ik verder kan groeien binnen data, automatisering, applicatiebeheer en research systems. Een omgeving met begeleiding, praktijkopdrachten en ruimte om te leren past goed bij hoe ik werk: gestructureerd, nieuwsgierig en gericht op meetbare verbetering.
+Praktisch ingesteld, analytisch en gewend om zelfstandig complexe onderwerpen eigen te maken. Ervaring met Python, SQL, FastAPI, PostgreSQL, Docker, monitoring, dashboards, API-integraties en procesautomatisering.
+
+Sterk in discipline, eigenaarschap, samenwerken en continu verbeteren. Op zoek naar een traineeship of junior functie waarin data, technologie en procesverbetering samenkomen.
