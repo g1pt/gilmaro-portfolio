@@ -17,6 +17,7 @@ import {
 import React, { useState } from "react";
 
 const cvPath = "/cv/Gilmaro_Piter_CV.pdf";
+const houseOfBetaCvPath = "/cv/Gilmaro_Piter_CV_HouseOfBeta.md";
 const profilePath = "/profile/gilmaro-profile.jpg";
 const email = "gilmaropiter@gmail.com";
 const githubUrl = "https://github.com/g1pt/systematic-trading-research-engine";
@@ -35,7 +36,7 @@ const buildCards = [
   {
     icon: BookOpenCheck,
     title: "Research platforms",
-    text: "Omgevingen bouwen waarin ideeën, datasets en resultaten overzichtelijk getest worden.",
+    text: "Omgevingen bouwen waarin ideeen, datasets en resultaten overzichtelijk getest worden.",
   },
   {
     icon: Workflow,
@@ -57,9 +58,9 @@ const buildCards = [
 const projects = [
   {
     title: "OpenAxis",
-    label: "Research & Monitoring Platform",
+    label: "Data Platform / Monitoring Platform",
     description:
-      "Een platform voor het structureren van historische datasets, backtests en dashboards.",
+      "Een platform voor het structureren van datasets, analyseprocessen en dashboards.",
     tech: ["Python", "FastAPI", "PostgreSQL", "Docker", "Data Pipelines"],
     impact: [
       "Minder handmatig analysewerk",
@@ -70,22 +71,22 @@ const projects = [
   },
   {
     title: "Rule-Based Decision Support System",
-    label: "Automation / Logic Engine",
+    label: "Decision Support / Logic Engine",
     description:
-      "Een systeem waarin subjectieve beslisregels zijn vertaald naar gestructureerde logica en automatische logging.",
+      "Een systeem waarin beslisregels zijn vertaald naar gestructureerde logica, automatische logging en uitlegbare processtappen.",
     tech: ["Python", "State Machines", "Event Logging", "Testing"],
     impact: [
       "Consistente analyse",
       "Minder menselijke bias",
       "Beter testbare beslisregels",
-      "Inzicht in waarom een signaal wel of niet ontstaat",
+      "Inzicht in waarom een signaal, status of uitkomst ontstaat",
     ],
   },
   {
     title: "Multi-Market Research Engine",
-    label: "Data Validation & Research",
+    label: "Data Validation / Research Environment",
     description:
-      "Een onderzoeksomgeving voor het testen, vergelijken en valideren van modellen over meerdere datasets.",
+      "Een validatieomgeving voor het testen, vergelijken en beoordelen van modellen over meerdere datasets.",
     tech: ["Python", "Pandas", "CSV Processing", "Walk-Forward Analysis"],
     impact: [
       "Objectieve selectie van sterke en zwakke modellen",
@@ -94,8 +95,8 @@ const projects = [
     ],
   },
   {
-    title: "API & Automation Integrations",
-    label: "Workflow Automation",
+    title: "Automation & API Integrations",
+    label: "Process Automation / API Workflows",
     description:
       "Experimenten met API-koppelingen, webhooks, logging en monitoring om processen automatisch events te laten verwerken.",
     tech: ["Python", "FastAPI", "APIs", "Webhooks", "Logging"],
@@ -137,19 +138,31 @@ const skills = [
 ];
 
 const focusPoints = [
+  "Analytisch vermogen",
   "Sterke leerhouding",
   "Praktische projectervaring",
+  "Eigenaarschap",
   "Discipline vanuit topsport",
-  "Interesse in data en processen",
+  "Procesmatig denken",
   "Beschikbaar voor 32+ uur",
-  "Open voor begeleiding en verdere ontwikkeling",
+  "Open voor begeleiding en groei",
 ];
 
-function CvButton({ variant = "primary" }) {
+function CvButton({
+  variant = "primary",
+  href = cvPath,
+  label = "Download CV",
+}) {
   return (
-    <a className={`button button-${variant}`} href={cvPath} target="_blank" rel="noreferrer" download>
+    <a
+      className={`button button-${variant}`}
+      href={href}
+      target="_blank"
+      rel="noreferrer"
+      download
+    >
       <Download size={18} aria-hidden="true" />
-      Download CV
+      {label}
     </a>
   );
 }
@@ -193,6 +206,7 @@ function App() {
         <nav aria-label="Hoofdnavigatie">
           <a href="#projects">Projecten</a>
           <a href="#skills">Skills</a>
+          <a href="#house-of-beta">House of Beta</a>
           <a href="#contact">Contact</a>
         </nav>
       </header>
@@ -200,16 +214,16 @@ function App() {
       <section className="hero" id="top">
         <div className="hero-content">
           <p className="eyebrow">Self-Taught Data & Automation Engineer</p>
-          <h1>Data, Automation & Research Systems</h1>
+          <h1>Data, Automation & Process Improvement</h1>
           <p className="hero-subtitle">
-            Ik bouw systemen die complexe processen inzichtelijk, meetbaar en
-            automatiseerbaar maken.
+            Ik bouw praktische data- en automatiseringsoplossingen die processen
+            inzichtelijk, meetbaar en beter uitvoerbaar maken.
           </p>
           <p className="hero-text">
             Met een achtergrond in topsport en jarenlange zelfstudie heb ik
             gewerkt aan Python-projecten rondom data-analyse, automatisering,
-            monitoring en research platforms. Mijn focus ligt op gestructureerd
-            werken, data begrijpen en processen verbeteren.
+            API-integraties, monitoring en dashboards. Mijn focus ligt op
+            gestructureerd werken, data begrijpen en processen verbeteren.
           </p>
           <div className="badge-row" aria-label="Kerninformatie">
             <span>Beschikbaar 32+ uur</span>
@@ -223,6 +237,11 @@ function App() {
               <ArrowRight size={18} aria-hidden="true" />
             </a>
             <CvButton variant="secondary" />
+            <CvButton
+              variant="secondary"
+              href={houseOfBetaCvPath}
+              label="Download CV (House of Beta)"
+            />
             <a className="button button-ghost" href={`mailto:${email}`}>
               <Mail size={18} aria-hidden="true" />
               Neem contact op
@@ -259,7 +278,10 @@ function App() {
       </section>
 
       <section className="section about" id="about">
-        <SectionHeader eyebrow="Over mij" title="Niet traditioneel, wel praktisch opgebouwd" />
+        <SectionHeader
+          eyebrow="Over mij"
+          title="Niet traditioneel, wel praktisch opgebouwd"
+        />
         <div className="about-grid">
           <div className="copy-stack">
             <p>
@@ -273,9 +295,10 @@ function App() {
               data, processen en technische oplossingen samenkomen.
             </p>
             <p>
-              Mijn interesse begon binnen financiële markten, maar de kern van
-              mijn werk ligt breder: data structureren, processen modelleren,
-              systemen bouwen en resultaten meetbaar maken.
+              Mijn interesse begon binnen een data-intensief onderzoeksdomein,
+              maar de kern van mijn werk ligt breder: data structureren,
+              processen modelleren, systemen bouwen en resultaten meetbaar
+              maken.
             </p>
             <p>
               Ik zoek een omgeving waarin ik verder kan groeien binnen IT, data,
@@ -319,7 +342,7 @@ function App() {
         <SectionHeader
           eyebrow="Projecten"
           title="Gebouwd vanuit onderzoek, automatisering en meetbaarheid"
-          text="Trading komt alleen terug als domeincontext; de technische waarde zit in data, validatie, workflow en systeemontwerp."
+          text="De technische waarde zit in data, validatie, workflow, logging, dashboards en systeemontwerp."
         />
         <div className="project-list">
           {projects.map((project) => (
@@ -400,6 +423,31 @@ function App() {
         </div>
       </section>
 
+      <section className="section house-beta" id="house-of-beta">
+        <div>
+          <p className="eyebrow">Waarom House of Beta</p>
+          <h2>Groei in data, technologie en praktijkvraagstukken</h2>
+          <p>
+            Ik ben op zoek naar een omgeving waarin analytisch denken, leren in
+            de praktijk en het oplossen van complexe vraagstukken centraal
+            staan. De combinatie van data, technologie en persoonlijke
+            ontwikkeling sluit goed aan bij hoe ik mezelf de afgelopen jaren heb
+            ontwikkeld.
+          </p>
+        </div>
+        <div className="house-beta-actions">
+          <CvButton
+            variant="primary"
+            href={houseOfBetaCvPath}
+            label="Download CV (House of Beta)"
+          />
+          <a className="button button-ghost" href="#contact">
+            <Mail size={18} aria-hidden="true" />
+            Neem contact op
+          </a>
+        </div>
+      </section>
+
       <section className="section contact" id="contact">
         <SectionHeader
           eyebrow="Contact"
@@ -427,7 +475,7 @@ function App() {
             <p>
               <strong>GitHub</strong>
               <a href={githubUrl} target="_blank" rel="noreferrer">
-                g1pt/systematic-trading-research-engine
+                GitHub projectrepository
               </a>
             </p>
           </div>
@@ -436,12 +484,22 @@ function App() {
               <Mail size={18} aria-hidden="true" />
               Mail mij
             </a>
-            <a className="button button-secondary" href={githubUrl} target="_blank" rel="noreferrer">
+            <a
+              className="button button-secondary"
+              href={githubUrl}
+              target="_blank"
+              rel="noreferrer"
+            >
               <Github size={18} aria-hidden="true" />
               Bekijk GitHub
               <ExternalLink size={15} aria-hidden="true" />
             </a>
             <CvButton variant="ghost" />
+            <CvButton
+              variant="ghost"
+              href={houseOfBetaCvPath}
+              label="Download CV (House of Beta)"
+            />
           </div>
         </div>
       </section>

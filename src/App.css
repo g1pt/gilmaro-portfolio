@@ -563,6 +563,30 @@ h3 {
   padding: 34px;
 }
 
+.house-beta {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(280px, 0.45fr);
+  gap: 28px;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(145deg, rgba(73, 209, 125, 0.12), rgba(255, 255, 255, 0.035)),
+    rgba(9, 23, 19, 0.72);
+  box-shadow: var(--shadow);
+  padding: 34px;
+}
+
+.house-beta p {
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.house-beta-actions {
+  display: grid;
+  gap: 12px;
+}
+
 .focus-grid {
   display: grid;
   gap: 12px;
@@ -651,6 +675,7 @@ footer span:last-child {
   .about-grid,
   .project-card,
   .recruiter,
+  .house-beta,
   .contact-card {
     grid-template-columns: 1fr;
   }
@@ -717,6 +742,7 @@ footer span:last-child {
 
   .project-card,
   .recruiter,
+  .house-beta,
   .contact-card,
   .profile-card,
   .feature-card,

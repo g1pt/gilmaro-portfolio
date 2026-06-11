@@ -37,16 +37,16 @@ npm run build
 
 ## CV
 
-Plaats je CV handmatig in:
+Standaard CV-pad:
 
 ```text
 public/cv/Gilmaro_Piter_CV.pdf
 ```
 
-De site gebruikt deze downloadlink:
+House of Beta recruiter-versie:
 
 ```text
-/cv/Gilmaro_Piter_CV.pdf
+public/cv/Gilmaro_Piter_CV_HouseOfBeta.md
 ```
 
-Omdat er lokaal geen CV-PDF is gevonden, toont de site nu: `CV beschikbaar op aanvraag`.
+De portfolio bevat een aparte knop: `Download CV (House of Beta)`.
