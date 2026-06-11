@@ -14,9 +14,10 @@ import {
   Network,
   Workflow,
 } from "lucide-react";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 const cvPath = "/cv/Gilmaro_Piter_CV.pdf";
+const profilePath = "/profile/gilmaro-profile.jpg";
 const email = "gilmaropiter@gmail.com";
 const githubUrl = "https://github.com/g1pt/systematic-trading-research-engine";
 
@@ -144,21 +145,30 @@ const focusPoints = [
   "Open voor begeleiding en verdere ontwikkeling",
 ];
 
-function CvButton({ variant = "primary", cvAvailable }) {
-  if (!cvAvailable) {
-    return (
-      <span className={`button button-${variant} button-disabled`}>
-        <Download size={18} aria-hidden="true" />
-        CV beschikbaar op aanvraag
-      </span>
-    );
-  }
-
+function CvButton({ variant = "primary" }) {
   return (
-    <a className={`button button-${variant}`} href={cvPath} download>
+    <a className={`button button-${variant}`} href={cvPath} target="_blank" rel="noreferrer" download>
       <Download size={18} aria-hidden="true" />
       Download CV
     </a>
+  );
+}
+
+function ProfilePhoto() {
+  const [imageAvailable, setImageAvailable] = useState(true);
+
+  return (
+    <div className="profile-photo-card" aria-label="Profielfoto Gilmaro Piter">
+      {imageAvailable ? (
+        <img
+          src={profilePath}
+          alt="Gilmaro Piter"
+          onError={() => setImageAvailable(false)}
+        />
+      ) : (
+        <span>GP</span>
+      )}
+    </div>
   );
 }
 
@@ -173,29 +183,6 @@ function SectionHeader({ eyebrow, title, text }) {
 }
 
 function App() {
-  const [cvAvailable, setCvAvailable] = useState(false);
-
-  useEffect(() => {
-    let cancelled = false;
-
-    fetch(cvPath, { cache: "no-store" })
-      .then((response) => {
-        const contentType = response.headers.get("content-type") || "";
-        if (!cancelled) {
-          setCvAvailable(response.ok && contentType.includes("application/pdf"));
-        }
-      })
-      .catch(() => {
-        if (!cancelled) {
-          setCvAvailable(false);
-        }
-      });
-
-    return () => {
-      cancelled = true;
-    };
-  }, []);
-
   return (
     <main>
       <header className="site-header">
@@ -235,7 +222,7 @@ function App() {
               Bekijk projecten
               <ArrowRight size={18} aria-hidden="true" />
             </a>
-            <CvButton variant="secondary" cvAvailable={cvAvailable} />
+            <CvButton variant="secondary" />
             <a className="button button-ghost" href={`mailto:${email}`}>
               <Mail size={18} aria-hidden="true" />
               Neem contact op
@@ -244,6 +231,7 @@ function App() {
         </div>
 
         <aside className="hero-panel" aria-label="Profiel samenvatting">
+          <ProfilePhoto />
           <div className="signal-card">
             <span className="signal-dot" />
             <p>Richting</p>
@@ -453,7 +441,7 @@ function App() {
               Bekijk GitHub
               <ExternalLink size={15} aria-hidden="true" />
             </a>
-            <CvButton variant="ghost" cvAvailable={cvAvailable} />
+            <CvButton variant="ghost" />
           </div>
         </div>
       </section>

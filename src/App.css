@@ -300,6 +300,33 @@ h3 {
   animation: rise 620ms ease 120ms both;
 }
 
+.profile-photo-card {
+  display: grid;
+  place-items: center;
+  width: 188px;
+  height: 188px;
+  margin: 0 auto 4px;
+  border: 1px solid rgba(109, 242, 156, 0.34);
+  border-radius: 50%;
+  background:
+    linear-gradient(145deg, rgba(73, 209, 125, 0.22), rgba(255, 255, 255, 0.04)),
+    var(--bg-elevated);
+  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.32);
+  overflow: hidden;
+}
+
+.profile-photo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-photo-card span {
+  color: var(--accent-strong);
+  font-size: 3rem;
+  font-weight: 900;
+}
+
 .signal-card,
 .profile-card,
 .feature-card,
