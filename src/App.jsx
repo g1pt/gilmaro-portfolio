@@ -1,66 +1,27 @@
 import {
   ArrowRight,
-  BarChart3,
-  BookOpenCheck,
   CheckCircle2,
-  Database,
   Download,
   ExternalLink,
-  GitBranch,
   Github,
   Mail,
   MapPin,
-  MonitorCheck,
   Network,
-  Workflow,
 } from "lucide-react";
 import React, { useState } from "react";
 
-const cvPath = "/cv/Gilmaro_Piter_CV.pdf";
-const houseOfBetaCvPath = "/cv/Gilmaro_Piter_CV_HouseOfBeta.md";
+const cvPath = "/cv/Gilmaro_Piter_CV_HouseOfBeta.pdf";
+const originalCvPath = "/cv/Gilmaro_Piter_CV_Original.pdf";
 const profilePath = "/profile/gilmaro-profile.jpg";
 const email = "gilmaropiter@gmail.com";
-const githubUrl = "https://github.com/g1pt/systematic-trading-research-engine";
-
-const buildCards = [
-  {
-    icon: Database,
-    title: "Data pipelines",
-    text: "Data verzamelen, opschonen en structureren zodat analyse herhaalbaar wordt.",
-  },
-  {
-    icon: MonitorCheck,
-    title: "Monitoring dashboards",
-    text: "Inzicht geven in resultaten, status en proceskwaliteit.",
-  },
-  {
-    icon: BookOpenCheck,
-    title: "Research platforms",
-    text: "Omgevingen bouwen waarin ideeen, datasets en resultaten overzichtelijk getest worden.",
-  },
-  {
-    icon: Workflow,
-    title: "Process automation",
-    text: "Handmatige stappen vervangen door workflows, logging en reproduceerbare processen.",
-  },
-  {
-    icon: GitBranch,
-    title: "Rule-based decision systems",
-    text: "Beslisregels vertalen naar duidelijke, testbare logica.",
-  },
-  {
-    icon: BarChart3,
-    title: "Time-series analysis",
-    text: "Werken met historische data, patronen, validatie en meetbare uitkomsten.",
-  },
-];
+const githubUrl = "https://github.com/g1pt/gilmaro-portfolio";
 
 const projects = [
   {
     title: "OpenAxis",
     label: "Research & Monitoring Platform",
     description:
-      "OpenAxis is een onderzoeks- en monitoringplatform voor het structureren, valideren en analyseren van datasets. De focus ligt op datakwaliteit, reproduceerbare analyses, monitoring en het inzichtelijk maken van resultaten via dashboards.",
+      "OpenAxis is een onderzoeks- en monitoringplatform voor het structureren, valideren en analyseren van datasets. Ik heb dit platform ontworpen en gebouwd met Python, FastAPI en PostgreSQL. De focus ligt op datakwaliteit, reproduceerbare analyses, monitoring en het inzichtelijk maken van resultaten via dashboards.",
     tech: ["Python", "FastAPI", "PostgreSQL", "Docker", "Data Pipelines"],
     impact: [
       "Minder handmatig analysewerk",
@@ -72,100 +33,68 @@ const projects = [
     ],
   },
   {
-    title: "Rule-Based Decision Support System",
-    label: "Decision Support / Logic Engine",
+    title: "Decision Support Logic",
+    label: "Beslissingsondersteuning",
     description:
-      "Een systeem waarin beslisregels zijn vertaald naar gestructureerde logica, automatische logging en uitlegbare processtappen.",
+      "Beslisregels vertaald naar gestructureerde logica, logging en testbare processtappen.",
     tech: ["Python", "State Machines", "Event Logging", "Testing"],
-    impact: [
-      "Consistente analyse",
-      "Minder menselijke bias",
-      "Beter testbare beslisregels",
-      "Inzicht in waarom een signaal, status of uitkomst ontstaat",
-    ],
+    impact: ["Consistente analyse", "Betere uitlegbaarheid", "Minder losse interpretatie"],
   },
   {
-    title: "Multi-Market Research Engine",
-    label: "Data Validation / Research Environment",
+    title: "Data Validation Engine",
+    label: "Validatieomgeving",
     description:
-      "Een validatieomgeving voor het testen, vergelijken en beoordelen van modellen over meerdere datasets.",
-    tech: ["Python", "Pandas", "CSV Processing", "Walk-Forward Analysis"],
-    impact: [
-      "Objectieve selectie van sterke en zwakke modellen",
-      "Datagedreven besluitvorming",
-      "Betere kwaliteitscontrole op datasets",
-    ],
+      "Een omgeving voor het vergelijken en valideren van modellen over meerdere datasets.",
+    tech: ["Python", "Pandas", "CSV Processing"],
+    impact: ["Datagedreven vergelijking", "Kwaliteitscontrole", "Herhaalbare evaluatie"],
   },
-  {
-    title: "Automation & API Integrations",
-    label: "Process Automation / API Workflows",
-    description:
-      "Experimenten met API-koppelingen, webhooks, logging en monitoring om processen automatisch events te laten verwerken.",
-    tech: ["Python", "FastAPI", "APIs", "Webhooks", "Logging"],
-    impact: [
-      "Minder handmatige opvolging",
-      "Duidelijke eventregistratie",
-      "Betere controle over systeemgedrag",
-    ],
-  },
-];
-
-const processSteps = [
-  "Probleem begrijpen",
-  "Data verzamelen",
-  "Proces modelleren",
-  "Automatiseren",
-  "Meten",
-  "Verbeteren",
 ];
 
 const coreSkills = [
   "Python",
   "SQL",
-  "Data Analysis",
-  "Process Automation",
   "PostgreSQL",
   "Git",
+  "Data Analysis",
+  "Process Automation",
+];
+
+const additionalSkills = [
   "FastAPI",
   "Docker",
   "Monitoring",
   "Dashboarding",
-];
-
-const additionalSkills = [
-  "Data Pipelines",
   "API Integrations",
-  "Webhooks",
   "Testing",
-  "Research Methodology",
+  "Webhooks",
   "CSV Processing",
   "Time-Series Analysis",
+  "Research Methodology",
 ];
 
-const focusPoints = [
-  "Analytisch vermogen",
+const interests = [
+  "Data Analyse",
+  "Applicatiebeheer",
+  "Process Automation",
+  "Data Engineering",
+  "Monitoring & Reporting",
+  "Business & IT",
+];
+
+const strengths = [
+  "Analytisch en onderzoekend",
   "Sterke leerhouding",
   "Praktische projectervaring",
-  "Eigenaarschap",
   "Discipline vanuit topsport",
   "Procesmatig denken",
-  "Beschikbaar voor 32+ uur",
-  "Open voor begeleiding en groei",
+  "Zelfstandig werken",
+  "Samenwerken en communiceren",
+  "Focus op continue verbetering",
 ];
 
-function CvButton({
-  variant = "primary",
-  href = cvPath,
-  label = "Download CV",
-}) {
+function CvButton({ variant = "primary", href = cvPath, label = "Download CV" }) {
   return (
-    <a
-      className={`button button-${variant}`}
-      href={href}
-      target="_blank"
-      rel="noreferrer"
-      download
-    >
+    <a className={`button button-${variant}`} href={href} target="_blank" rel="noreferrer" download>
       <Download size={18} aria-hidden="true" />
       {label}
     </a>
@@ -178,11 +107,7 @@ function ProfilePhoto() {
   return (
     <div className="profile-photo-card" aria-label="Profielfoto Gilmaro Piter">
       {imageAvailable ? (
-        <img
-          src={profilePath}
-          alt="Gilmaro Piter"
-          onError={() => setImageAvailable(false)}
-        />
+        <img src={profilePath} alt="Gilmaro Piter" onError={() => setImageAvailable(false)} />
       ) : (
         <span>GP</span>
       )}
@@ -211,7 +136,7 @@ function App() {
         <nav aria-label="Hoofdnavigatie">
           <a href="#projects">Projecten</a>
           <a href="#skills">Skills</a>
-          <a href="#house-of-beta">House of Beta</a>
+          <a href="#house-of-beta">House of Bèta</a>
           <a href="#contact">Contact</a>
         </nav>
       </header>
@@ -221,14 +146,11 @@ function App() {
           <p className="eyebrow">Junior Data & Systems Specialist</p>
           <h1>Data • Automation • Research Systems</h1>
           <p className="hero-subtitle">
-            Ik bouw systemen die complexe processen inzichtelijk, meetbaar en
-            automatiseerbaar maken.
+            Ik bouw systemen die complexe processen inzichtelijk, meetbaar en automatiseerbaar maken.
           </p>
           <p className="hero-text">
-            Met een achtergrond in topsport en jarenlange zelfstudie heb ik
-            gewerkt aan projecten rondom data-analyse, automatisering,
-            monitoring en onderzoeksplatformen. De focus ligt op gestructureerd
-            werken, data begrijpen en processen verbeteren.
+            Met een achtergrond in topsport en jarenlange zelfstudie werk ik aan projecten rond
+            data-analyse, automatisering, monitoring en onderzoeksplatformen.
           </p>
           <div className="badge-row" aria-label="Kerninformatie">
             <span>Beschikbaar 32+ uur</span>
@@ -242,6 +164,11 @@ function App() {
               <ArrowRight size={18} aria-hidden="true" />
             </a>
             <CvButton variant="secondary" />
+            <a className="button button-secondary" href={githubUrl} target="_blank" rel="noreferrer">
+              <Github size={18} aria-hidden="true" />
+              Bekijk GitHub
+              <ExternalLink size={15} aria-hidden="true" />
+            </a>
             <a className="button button-ghost" href={`mailto:${email}`}>
               <Mail size={18} aria-hidden="true" />
               Neem contact op
@@ -263,11 +190,11 @@ function App() {
             </div>
             <div>
               <span>Basis</span>
-              <strong>Python, SQL, API's, Docker</strong>
+              <strong>Python, SQL, Git, PostgreSQL</strong>
             </div>
             <div>
               <span>Werkstijl</span>
-              <strong>Zelfstandig, meetbaar, leerbaar</strong>
+              <strong>Leerbaar, rustig, praktisch</strong>
             </div>
             <div>
               <span>Beschikbaar</span>
@@ -278,112 +205,62 @@ function App() {
       </section>
 
       <section className="section about" id="about">
-        <SectionHeader
-          eyebrow="Over mij"
-          title="Niet traditioneel, wel praktisch opgebouwd"
-        />
+        <SectionHeader eyebrow="Over mij" title="Niet traditioneel, wel doelgericht" />
         <div className="about-grid">
           <div className="copy-stack">
             <p>
-              Mijn achtergrond ligt niet in een traditionele IT-opleiding. Tien
-              jaar topsport heeft gezorgd voor discipline, doorzettingsvermogen,
-              samenwerking en een sterke focus op continue verbetering.
+              Mijn achtergrond ligt niet in een traditionele IT-opleiding. Tien jaar topsport heeft
+              gezorgd voor discipline, doorzettingsvermogen, samenwerken onder druk en continue
+              verbetering.
             </p>
             <p>
-              Die mentaliteit pas ik nu toe op data, software en automatisering.
-              De afgelopen jaren heb ik zelfstandig gewerkt aan projecten waarin
-              data, processen en technische oplossingen samenkomen.
+              Diezelfde mentaliteit pas ik toe op data, software en automatisering. Ik heb
+              zelfstandig projecten gebouwd waarin data, processen en technische oplossingen
+              samenkomen.
             </p>
             <p>
-              Mijn interesse begon binnen financiële markten, maar de kern van
-              mijn werk ligt breder: data structureren, processen modelleren,
-              systemen bouwen en resultaten meetbaar maken.
-            </p>
-            <p>
-              Ik zoek een omgeving waarin ik verder kan groeien binnen data,
-              automatisering, applicatiebeheer en research systems.
+              Mijn interesse begon binnen financiële markten, maar de kern ligt breder: data
+              structureren, processen modelleren, systemen bouwen en resultaten meetbaar maken.
             </p>
           </div>
           <div className="profile-card">
             <Network size={28} aria-hidden="true" />
-            <h3>Research Systems Builder</h3>
+            <h3>Onderzoeks- en datasystemen</h3>
             <p>
-              Projecten gebouwd rond datastromen, validatie, logging,
-              dashboards en herhaalbare analyses.
+              Ondersteunend profiel: research systems, datastromen, validatie, logging en
+              dashboards.
             </p>
-            <ul>
-              <li>Zelfstudie richting IT, data en automatisering</li>
-              <li>Ervaring met lesgeven en samenwerken</li>
-              <li>Open voor junior rollen, traineeships en begeleiding</li>
-            </ul>
           </div>
         </div>
       </section>
 
-      <section className="section" id="build">
-        <SectionHeader
-          eyebrow="Wat ik bouw"
-          title="Praktische systemen voor data en besluitvorming"
-          text="De nadruk ligt op herhaalbare processen, duidelijke logging en inzicht in wat een systeem doet."
-        />
-        <div className="card-grid">
-          {buildCards.map(({ icon: Icon, title, text }) => (
-            <article className="feature-card" key={title}>
-              <Icon size={26} aria-hidden="true" />
-              <h3>{title}</h3>
-              <p>{text}</p>
-            </article>
-          ))}
+      <section className="section seek" id="wat-ik-zoek">
+        <SectionHeader eyebrow="Wat ik zoek" title="Junior rol of traineeship" />
+        <div className="seek-card">
+          <p>
+            Ik zoek een junior functie of traineeship waarin ik verder kan groeien binnen data,
+            automatisering, applicatiebeheer en procesverbetering.
+          </p>
+          <p>
+            Mijn voorkeur gaat uit naar een omgeving waar leren in de praktijk, begeleiding en
+            samenwerking centraal staan.
+          </p>
+          <div className="interest-list">
+            {interests.map((interest) => (
+              <span key={interest}>{interest}</span>
+            ))}
+          </div>
         </div>
       </section>
 
-      <section className="section projects" id="projects">
-        <SectionHeader
-          eyebrow="Projecten"
-          title="Gebouwd vanuit onderzoek, automatisering en meetbaarheid"
-          text="De technische waarde zit in data, validatie, workflow, logging, dashboards en systeemontwerp."
-        />
-        <div className="project-list">
-          {projects.map((project) => (
-            <article className="project-card" key={project.title}>
-              <div className="project-main">
-                <span className="project-label">{project.label}</span>
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-                <div className="tech-row">
-                  {project.tech.map((tech) => (
-                    <span key={tech}>{tech}</span>
-                  ))}
-                </div>
-              </div>
-              <div className="impact-box">
-                <strong>Impact</strong>
-                <ul>
-                  {project.impact.map((item) => (
-                    <li key={item}>
-                      <CheckCircle2 size={16} aria-hidden="true" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="section process">
-        <SectionHeader
-          eyebrow="Werkwijze"
-          title="Van probleem naar meetbare verbetering"
-          text="Ik werk graag vanuit een duidelijk probleem. Eerst begrijpen wat er gebeurt, daarna data structureren, regels of processen modelleren en vervolgens meten of de oplossing waarde toevoegt."
-        />
-        <div className="timeline">
-          {processSteps.map((step, index) => (
-            <div className="timeline-step" key={step}>
-              <span>{String(index + 1).padStart(2, "0")}</span>
-              <strong>{step}</strong>
-            </div>
+      <section className="section strengths" id="strengths">
+        <SectionHeader eyebrow="Sterke punten" title="Wat ik meeneem" />
+        <div className="strength-grid">
+          {strengths.map((strength) => (
+            <span key={strength}>
+              <CheckCircle2 size={17} aria-hidden="true" />
+              {strength}
+            </span>
           ))}
         </div>
       </section>
@@ -391,8 +268,8 @@ function App() {
       <section className="section" id="skills">
         <SectionHeader
           eyebrow="Skills"
-          title="Kernvaardigheden"
-          text="Een praktische technische basis voor data, automatisering, monitoring en procesverbetering."
+          title="Technische basis"
+          text="Kernvaardigheden eerst, aangevuld met tools en methodes uit eigen projecten."
         />
         <div className="skills-layout">
           <div>
@@ -414,27 +291,37 @@ function App() {
         </div>
       </section>
 
-      <section className="section recruiter">
-        <div>
-          <p className="eyebrow">Recruiter Samenvatting</p>
-          <h2>Junior Data & Systems Specialist</h2>
-          <p>
-            Junior Data & Systems Specialist met een achtergrond in topsport,
-            onderwijs en jarenlange zelfstudie richting IT. Praktisch ingesteld,
-            analytisch en gewend om zelfstandig complexe onderwerpen eigen te
-            maken. Ervaring met Python, SQL, FastAPI, PostgreSQL, Docker,
-            monitoring, dashboards, API-integraties en procesautomatisering.
-            Sterk in discipline, eigenaarschap, samenwerken en continu
-            verbeteren. Op zoek naar een traineeship of junior functie waarin
-            data, technologie en procesverbetering samenkomen.
-          </p>
-        </div>
-        <div className="focus-grid">
-          {focusPoints.map((point) => (
-            <span key={point}>
-              <CheckCircle2 size={17} aria-hidden="true" />
-              {point}
-            </span>
+      <section className="section projects" id="projects">
+        <SectionHeader
+          eyebrow="Projecten"
+          title="Praktische projectervaring"
+          text="Data, validatie, workflow, logging, dashboards en systeemontwerp."
+        />
+        <div className="project-list">
+          {projects.map((project) => (
+            <article className="project-card" key={project.title}>
+              <div className="project-main">
+                <span className="project-label">{project.label}</span>
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+                <div className="tech-row">
+                  {project.tech.map((tech) => (
+                    <span key={tech}>{tech}</span>
+                  ))}
+                </div>
+              </div>
+              <div className="impact-box">
+                <strong>Waarde</strong>
+                <ul>
+                  {project.impact.map((item) => (
+                    <li key={item}>
+                      <CheckCircle2 size={16} aria-hidden="true" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </article>
           ))}
         </div>
       </section>
@@ -444,43 +331,47 @@ function App() {
           <p className="eyebrow">Waarom House of Bèta</p>
           <h2>Analytisch leren in echte projecten</h2>
           <p>
-            Ik ben op zoek naar een omgeving waarin analytisch denken, leren in
-            de praktijk en het oplossen van complexe vraagstukken centraal
-            staan.
+            Ik ben op zoek naar een omgeving waarin analytisch denken, leren in de praktijk en het
+            oplossen van complexe vraagstukken centraal staan.
           </p>
           <p>
-            De combinatie van data, technologie en persoonlijke ontwikkeling
-            sluit goed aan bij hoe ik mezelf de afgelopen jaren heb ontwikkeld.
-          </p>
-          <p>
-            Mijn achtergrond is niet traditioneel, maar juist daardoor heb ik
-            geleerd om zelfstandig kennis op te bouwen, feedback te verwerken en
-            nieuwe onderwerpen stap voor stap eigen te maken.
-          </p>
-          <p>
-            House of Bèta spreekt mij aan omdat het ruimte biedt om te groeien,
-            praktijkervaring op te doen en tegelijkertijd waarde toe te voegen
-            aan echte projecten.
+            House of Bèta spreekt mij aan omdat het ruimte biedt om te groeien, praktijkervaring op
+            te doen en waarde toe te voegen aan echte projecten.
           </p>
         </div>
         <div className="house-beta-actions">
-          <CvButton
-            variant="primary"
-            href={houseOfBetaCvPath}
-            label="Download CV (House of Beta)"
-          />
-          <a className="button button-ghost" href="#contact">
-            <Mail size={18} aria-hidden="true" />
-            Neem contact op
+          <CvButton variant="primary" />
+          <a className="button button-ghost" href={originalCvPath} target="_blank" rel="noreferrer">
+            Originele CV bekijken
           </a>
+        </div>
+      </section>
+
+      <section className="section recruiter">
+        <div>
+          <p className="eyebrow">Recruiter Samenvatting</p>
+          <h2>Praktisch, analytisch en leerbaar</h2>
+          <p>
+            Junior Data & Systems Specialist met een achtergrond in topsport, onderwijs en
+            zelfstudie richting IT. Ervaring met Python, SQL, FastAPI, PostgreSQL, Docker,
+            monitoring, dashboards, API-integraties en procesautomatisering.
+          </p>
+        </div>
+        <div className="focus-grid">
+          {strengths.slice(0, 6).map((point) => (
+            <span key={point}>
+              <CheckCircle2 size={17} aria-hidden="true" />
+              {point}
+            </span>
+          ))}
         </div>
       </section>
 
       <section className="section contact" id="contact">
         <SectionHeader
           eyebrow="Contact"
-          title="Open voor junior rollen, traineeships en projecten"
-          text="Interesse in data, automatisering, applicatiebeheer en research systems."
+          title="Open voor junior rollen en traineeships"
+          text="Data, automatisering, applicatiebeheer en procesverbetering."
         />
         <div className="contact-card">
           <div className="contact-details">
@@ -497,13 +388,9 @@ function App() {
               <span>Rotterdam / Nederland</span>
             </p>
             <p>
-              <strong>LinkedIn</strong>
-              <span>Placeholder</span>
-            </p>
-            <p>
               <strong>GitHub</strong>
               <a href={githubUrl} target="_blank" rel="noreferrer">
-                GitHub projectrepository
+                g1pt/gilmaro-portfolio
               </a>
             </p>
           </div>
@@ -512,22 +399,15 @@ function App() {
               <Mail size={18} aria-hidden="true" />
               Mail mij
             </a>
-            <a
-              className="button button-secondary"
-              href={githubUrl}
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a className="button button-secondary" href={githubUrl} target="_blank" rel="noreferrer">
               <Github size={18} aria-hidden="true" />
               Bekijk GitHub
               <ExternalLink size={15} aria-hidden="true" />
             </a>
             <CvButton variant="ghost" />
-            <CvButton
-              variant="ghost"
-              href={houseOfBetaCvPath}
-              label="Download CV (House of Beta)"
-            />
+            <a className="button button-ghost" href={originalCvPath} target="_blank" rel="noreferrer">
+              Originele CV bekijken
+            </a>
           </div>
         </div>
       </section>

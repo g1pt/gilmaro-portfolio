@@ -16,11 +16,33 @@ Met een achtergrond in topsport en jarenlange zelfstudie heb ik gewerkt aan proj
 
 Mijn achtergrond ligt niet in een traditionele IT-opleiding. Tien jaar topsport heeft gezorgd voor discipline, doorzettingsvermogen, samenwerken onder druk en een sterke focus op continue verbetering.
 
-Diezelfde mentaliteit pas ik nu toe op data, software en automatisering. De afgelopen jaren heb ik zelfstandig gewerkt aan projecten waarin data, processen en technische oplossingen samenkomen.
-
 Mijn interesse begon binnen financiële markten, maar de kern van mijn werk ligt breder: data structureren, processen modelleren, systemen bouwen en resultaten meetbaar maken.
 
-Ik zoek een omgeving waarin ik verder kan groeien binnen data, automatisering, applicatiebeheer en research systems.
+## Wat ik zoek
+
+Ik zoek een junior functie of traineeship waarin ik verder kan groeien binnen data, automatisering, applicatiebeheer en procesverbetering.
+
+Mijn voorkeur gaat uit naar een omgeving waar leren in de praktijk, begeleiding en samenwerking centraal staan.
+
+**Interessegebieden**
+
+- Data Analyse
+- Applicatiebeheer
+- Process Automation
+- Data Engineering
+- Monitoring & Reporting
+- Business & IT
+
+## Sterke punten
+
+- Analytisch en onderzoekend
+- Sterke leerhouding
+- Praktische projectervaring
+- Discipline vanuit topsport
+- Procesmatig denken
+- Zelfstandig werken
+- Samenwerken en communiceren
+- Focus op continue verbetering
 
 ## Skills
 
@@ -28,24 +50,23 @@ Ik zoek een omgeving waarin ik verder kan groeien binnen data, automatisering, a
 
 - Python
 - SQL
-- Data Analysis
-- Process Automation
 - PostgreSQL
 - Git
+- Data Analysis
+- Process Automation
+
+### Aanvullend
+
 - FastAPI
 - Docker
 - Monitoring
 - Dashboarding
-
-### Aanvullend
-
-- Data Pipelines
 - API Integrations
-- Webhooks
 - Testing
-- Research Methodology
+- Webhooks
 - CSV Processing
 - Time-Series Analysis
+- Research Methodology
 
 ## Projectervaring
 
@@ -55,7 +76,7 @@ Ik zoek een omgeving waarin ik verder kan groeien binnen data, automatisering, a
 
 OpenAxis is een onderzoeks- en monitoringplatform voor het structureren, valideren en analyseren van datasets.
 
-De focus ligt op datakwaliteit, reproduceerbare analyses, monitoring en het inzichtelijk maken van resultaten via dashboards.
+Ik heb dit platform ontworpen en gebouwd met Python, FastAPI en PostgreSQL. De focus ligt op datakwaliteit, reproduceerbare analyses, monitoring en het inzichtelijk maken van resultaten via dashboards.
 
 **Technologie**
 
@@ -72,74 +93,33 @@ De focus ligt op datakwaliteit, reproduceerbare analyses, monitoring en het inzi
 - Reproduceerbare analyses
 - Datakwaliteit en validatie
 - Monitoring van processen en resultaten
-- Schaalbare architectuur voor verdere uitbreiding
+- Schaalbare basis voor verdere uitbreiding
 
-### Rule-Based Decision Support System
+### Decision Support Logic
 
-**Beslissingsondersteuning en proceslogica**
+**Beslissingsondersteuning**
 
-Een systeem waarin beslisregels zijn vertaald naar gestructureerde logica, automatische logging en uitlegbare processtappen. De focus ligt op consistentie, testbaarheid en inzicht in waarom een status of uitkomst ontstaat.
+Beslisregels vertaald naar gestructureerde logica, logging en testbare processtappen.
 
-**Technologie**
+**Technologie:** Python, state machines, event logging, testing
 
-- Python
-- State Machines
-- Event Logging
-- Testing
+**Waarde:** consistente analyse, betere uitlegbaarheid en minder losse interpretatie.
 
-**Waarde**
+### Data Validation Engine
 
-- Consistente analyse
-- Minder menselijke bias
-- Beter testbare beslisregels
-- Transparantere besluitvorming
+**Validatieomgeving**
 
-### Multi-Market Research Engine
+Een omgeving voor het vergelijken en valideren van modellen over meerdere datasets.
 
-**Validatieomgeving en onderzoeksplatform**
+**Technologie:** Python, Pandas, CSV processing
 
-Een validatieomgeving voor het testen, vergelijken en beoordelen van modellen over meerdere datasets. De focus ligt op data-validatie, kwaliteitscontrole en objectieve vergelijking van resultaten.
-
-**Technologie**
-
-- Python
-- Pandas
-- CSV Processing
-- Walk-Forward Analysis
-
-**Waarde**
-
-- Objectieve selectie van sterke en zwakke modellen
-- Datagedreven besluitvorming
-- Betere kwaliteitscontrole op datasets
-- Meer structuur in experimenten en evaluatie
-
-### Automation & API Integrations
-
-**Procesautomatisering en event-driven workflows**
-
-Experimenten met API-koppelingen, webhooks, logging en monitoring om processen automatisch events te laten verwerken.
-
-**Technologie**
-
-- Python
-- FastAPI
-- APIs
-- Webhooks
-- Logging
-
-**Waarde**
-
-- Minder handmatige opvolging
-- Duidelijke eventregistratie
-- Betere controle over systeemgedrag
-- Basis voor verdere automatisering en monitoring
+**Waarde:** datagedreven vergelijking, kwaliteitscontrole en herhaalbare evaluatie.
 
 ## Topsport achtergrond
 
-Tien jaar handbal op hoog niveau heeft mijn werkhouding sterk gevormd. Topsport vraagt om discipline, trainen met herhaling, feedback verwerken, samenwerken, omgaan met druk en blijven verbeteren wanneer resultaten nog niet goed genoeg zijn.
+Tien jaar handbal op hoog niveau heeft mijn werkhouding sterk gevormd. Topsport vraagt om discipline, herhaling, feedback verwerken, samenwerken, omgaan met druk en blijven verbeteren.
 
-Die mentaliteit neem ik mee in mijn technische ontwikkeling. Nieuwe onderwerpen pak ik gestructureerd aan: begrijpen, oefenen, meten, evalueren en opnieuw verbeteren.
+Die mentaliteit neem ik mee in mijn technische ontwikkeling. Nieuwe onderwerpen pak ik gestructureerd aan: begrijpen, oefenen, meten, evalueren en verbeteren.
 
 ## Werkervaring
 
@@ -147,7 +127,9 @@ Die mentaliteit neem ik mee in mijn technische ontwikkeling. Nieuwe onderwerpen 
 
 Ervaring met lesgeven aan basisschoolkinderen. Hierdoor heb ik geleerd om duidelijk te communiceren, geduldig uit te leggen, verantwoordelijkheid te nemen en mijn aanpak aan te passen aan het niveau van de ander.
 
-Deze ervaring helpt ook in technische teams: goed luisteren, vragen stellen, uitleg geven en samenwerken aan praktische oplossingen.
+### Praktijkervaring buiten IT
+
+Ervaring in klantgerichte en operationele omgevingen, waaronder dienstverlening, logistiek en zelfstandige werkzaamheden. Deze achtergrond heeft bijgedragen aan eigenaarschap, betrouwbaarheid, communicatie en praktisch probleemoplossend vermogen.
 
 ## Opleiding & Zelfstudie
 
