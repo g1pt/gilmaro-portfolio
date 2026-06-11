@@ -1,0 +1,43 @@
+# Environments
+.env
+.env.*
+!.env.example
+crypto.env
+indices.env
+
+# Python caches
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+*.pyc
+*.pyo
+*.pyd
+
+# Logs
+logs/
+*.log
+
+# Local backups / temp
+*.bak
+*.tmp
+*.temp
+*.zip
+
+# Runtime outputs
+results/
+paper_trading/*.csv
+trading/*.csv
+
+# Local data artifacts
+data/*.csv
+data/*.xlsx
+data/*.parquet
+
+# Virtual environments
+.venv/
+venv/
+
+# Frontend dependencies and build output
+node_modules/
+dist/
+.netlify/
